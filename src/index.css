@@ -1,13 +1,62 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex !important;
+  }
+  .navbar {
+    position: fixed !important;
+    top: 3.5rem;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 !important;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+  }
+  .navbar.open {
+    transform: translateX(0);
+  }
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .navbar ul li {
+    width: 100%;
+  }
+  .navbar ul li a {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+  }
+  .navbar ul li a:hover {
+    background-color: #0b3da5;
+    color: #fff;
+  }
 }
